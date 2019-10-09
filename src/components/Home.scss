@@ -1,9 +1,9 @@
-html {
+ .home {
     background: url(../img/Autumn.jpg) no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size: 100%;
+    background-size: cover;
 }
 
 main {
@@ -22,9 +22,9 @@ main {
             background-color: white;
             color: black;
             font-size: 22px;
-            padding: 14px 40px;
+            padding: 15px 40px;
             border-radius: 8px;
-            border: 4px solid #3B6FF7;
+            border: 3px solid #3B6FF7;
             align-self: center;
         }
     }
