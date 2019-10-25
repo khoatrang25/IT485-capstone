@@ -1,24 +1,33 @@
-import React from 'react';
+import React, { useState } from "react";
 import { Link } from 'react-router-dom';
-import './NavBar.scss';
 
+import Example from './Example';
+
+import './NavBar.scss';
 import logo from '../img/UBorrow.jpg';
 
-const NavBar = () => (
-  <nav>
-    <ul>
-      <li>
-        <Link to="/"><img className="logo" src={logo} alt="logo"></img></Link>
-      </li>
-      <li>
-        Forgot your password?
-      </li>
-      <li>
-        <Link to="./signup"><button>Login</button></Link>
-      </li>
-    </ul>
-    <br/>
-  </nav>
-);
+const NavBar = () => {
+  const [loginModal, setLoginModal] = useState(false);
+  return (
+    <div>
+      {loginModal && <Example/>}
+      <nav>
+        <ul>
+          <li>
+            <Link to="/"><img className="logo" src={logo} alt="logo"></img></Link>
+          </li>
+          <li><Link to="/example">example</Link></li>
+          <li>
+            Forgot your password?
+          </li>
+          <br/>
+          <li>
+            <button id="modal-btn" class="button" onClick={() => setLoginModal(!loginModal)}>Login</button>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  )  
+}
 
 export default NavBar;
