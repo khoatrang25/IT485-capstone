@@ -1,12 +1,15 @@
 import React from 'react';
-
 import "./Signup.scss";
+
+import NavBar from './NavBar';
 
 const Signup = () => {
     return (
+        <>
+        <NavBar />
         <div>
             <h1>Sign Up Here!</h1>
-            <form>
+            <form className='signup'>
                 <div className="lefthalf">
                     <p>Username</p>
                     <input type='text'/>
@@ -16,29 +19,28 @@ const Signup = () => {
                     <input type='text'/>
                     <p>Last Name</p>
                     <input type='text'/>
+                    
+                </div>
+                <div className="righthalf">
                     <p>UMB ID</p>
                     <input type='number'/>
                     <p>Email</p>
                     <input type='email'/>
                     <br />
-                </div>
-                <div className="righthalf">
                     <p>Phone</p>
                     <input type='number'/>
                     <p>Dorm/Commute</p>
-                    <input type='text'/>
-                    <p>Debit/Credit Card</p>
-                    <input type='number'/>
-                    <p>Expiration Date</p>
-                    <input type='number'/>
-                    <p>CVC</p>
-                    <input type='number'/>
-                    <br />
+                    <select>
+                    <option value="volvo">Dorm</option>
+                    <option value="saab">Commute</option>
+                    </select>
+                    <br/>
                     <input type='submit'/>
                     <br />
                 </div>
             </form>
         </div>
+        </>
     )
 }
 
