@@ -1,0 +1,18 @@
+.profile {
+    background-color: #EFEFEF;
+    height: 200px;
+    border-bottom: 2px solid #3B6FF7;
+    .left {
+        float: left;
+        margin-top: 1.2%;
+        margin-left: 5%;
+    }
+    .avatar {
+        height: 150px;
+    }
+    p {
+        font-size: 24px;
+        float: left;
+        margin-left: 70px;
+    }
+}
