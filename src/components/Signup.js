@@ -23,12 +23,12 @@ const Signup = () => {
                 </div>
                 <div className="righthalf">
                     <p>UMB ID</p>
-                    <input type='number'/>
+                    <input type='number' pattern="[0-9]{8}"required/>
                     <p>Email</p>
-                    <input type='email'/>
+                    <input type='email' pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 4}$"required/>
                     <br />
                     <p>Phone</p>
-                    <input type='number'/>
+                    <input type='number' pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"required/>
                     <p>Dorm/Commute</p>
                     <select>
                     <option value="volvo">Dorm</option>
