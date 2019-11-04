@@ -10,9 +10,21 @@
     .avatar {
         height: 150px;
     }
+    .phone {
+        margin: 0px 0px 0px 0px;
+    }
+    .email {
+        margin: 30px 0px 0px 0px;
+    }
     p {
+        margin: 0px 0px 0px 0px;
         font-size: 24px;
-        float: left;
         margin-left: 70px;
+        float: left;
+    }
+    button {
+        margin-right: 15px;
+        float: right;
+        flex-direction: row;
     }
 }

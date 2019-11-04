@@ -21,9 +21,9 @@ const NavBar = () => {
         </Modal.Header>
         <Modal.Body>
         <p>Username</p>
-          <input type='text'/>
+          <input className='userAcc' type='text'/>
           <p>Password</p>
-          <input type='password'/>
+          <input className='userAcc' type='password'/>
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>
@@ -40,7 +40,7 @@ const NavBar = () => {
         </Modal.Header>
         <Modal.Body>
           <p>Enter Your Email</p>
-          <input type='text'/>
+          <input  className='userAcc' type='email' required pattern='[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 4}$'/>
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose1}>

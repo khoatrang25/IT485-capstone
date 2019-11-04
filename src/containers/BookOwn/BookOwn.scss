@@ -1,4 +1,55 @@
-.row {
-    float: center;
+h1 {
+    float: left;
+    clear: left;
     margin-left: 50px;
+}
+
+.add {
+    float: left;
+    clear: right;
+    margin-top: 35px;
+    margin-left: 10px;
+    background-color: transparent;
+    color: #3B6FF7;
+    font-size: 16px;
+    border-left: 2px solid #3B6FF7;
+    border-right: none;
+    border-top: none;
+    border-bottom: none;
+    padding: 5px 17px;
+    align-self: center;
+    &:hover {
+        text-decoration: underline;
+        background-color: transparent;
+        color: #3B6FF7;
+        font-size: 16px;
+        border-left: 2px solid #3B6FF7;
+        border-right: none;
+        border-top: none;
+        border-bottom: none;
+        padding: 5px 17px;
+        align-self: center;
+    }
+}
+
+.error {
+    color: red;
+    font-size: 15px;
+}
+
+.input {
+    margin: 10px 0px 3px 0px;
+}
+
+.row {
+    margin-top: 20px;
+    margin-left: 70px;
+}
+
+.list {
+    width: 80%;
+    margin-top: 60px;
+    margin-left: 50px;
+    font-size: 16px;
+    border-radius: 10px;
 }

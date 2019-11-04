@@ -1,61 +1,88 @@
 import React, { useState } from "react";
-import { Modal, Button } from 'react-bootstrap';
 import './Profile.scss'
 
 import NavBar2 from './NavBar2';
+import BookOwn from '../containers/BookOwn/BookOwn'
 
 import avatar from '../img/avatar.png';
 
 const Profile = () => {
-  const [show, setShow] = useState(false);
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+  const [toggle , setToggle] = useState(false)
+  //14 will come from backend
+  //Update The Display of Profile
+  const [profile, setProfile] = useState({phone: '1234235433', email: 'khoa@gmail.com'})
+  //Update the state of the form
+  const [profileForm, setProfileForm] = useState({phone: '', email: ''})
 
-  return (
-    <div>
-      <Modal show={show} onHide={handleClose}>
-        <Modal.Header closeButton1>
-          <Modal.Title><h3>Books Own |</h3><p> Adding</p></Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-          <p>Book Name</p>
-          <input type='text'/>
-          <p>Author</p>
-          <input type='text'/>
-          <p>Edition</p>
-          <input type='number'/>
-          <p>*If the book does not have an edition, put 0</p>
-          <p>ISBN</p>
-          <input type='number'/>
-          <p>*If the book does not have an ISBN, put 0</p>
-        </Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
-            Cancel
-          </Button>
-          <Button variant="primary" onClick={handleClose}>
-            Confirm
-          </Button>
-        </Modal.Footer>
-      </Modal>
+  const handleEdit = () => setToggle(!toggle)
+
+  //changes the state of the form
+  const onChange = (e) => {
+    const updateProfile = {}
+    updateProfile[e.target.name] = e.target.value
+    setProfileForm({...profileForm,...updateProfile})
+  }
+  //change and update the actual profile
+  const confirmBtn = () => {
+    if (!profileForm.phone || !profileForm.email) {
+      return null;
+    }
+    setProfile(profileForm)
+    setToggle(false)
+    setProfileForm({phone:'', email:''})
+  }
+
+  if (toggle) {
+    return (
+      <div>
       <NavBar2/>
       <div className="profile">
         <div className='left'>
           <img className="avatar" src={avatar} alt="avatar"></img>
-        <h5>Name</h5>
+          <h5>Name</h5>
         </div>
         <br/>
-        <p>Phone</p>
+        <div className='phone'>
+          <p>Phone</p>
+          <input name='phone' type='text' placeholder='phone' onChange={onChange}/>
+        </div>
+          <br/>
+        <div className='email'>
+          <p>Email</p>
+          <input name='email' type='email' placeholder='email' onChange={onChange}/>
+        </div>
         <br/>
-        <p className='info'>Email</p>
+        <button onClick={confirmBtn}>Confirm</button>
         <br/>
-        <p>Dorm/Commute</p>
-        <br/>
+        <button onClick={handleEdit}>Cancel</button>
       </div>
-      <div className="bookown">
-        <h1>Books Own</h1>
+      <BookOwn/>
+    </div>
+    )
+  }
+
+  return (
+    <div>
+      <NavBar2/>
+      <div className="profile">
+        <div className='left'>
+          <img className="avatar" src={avatar} alt="avatar"></img>
+          {/* Name will need to pull from backend */}
+          <h5>Name</h5>
+        </div>
+        <div className='phone'>
+          <p>Phone</p>
+          {profile.phone}
+        </div>
+        <br/>
+        <div className='email'>
+          <p>Email</p>
+          {profile.email}
+        </div>
+        <br/>
+        <button onClick={handleEdit}>Edit</button>
       </div>
-        <button class="button" onClick={handleShow}>Add</button>
+      <BookOwn/>
     </div>
 );
 }
