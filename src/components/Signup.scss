@@ -1,27 +1,31 @@
-h1 {
+div h1 {
+    float: right;
     margin-top: 1.5%;
-    margin-left: 50%;
+    margin-right: 23%;
 }
 
 .signup {
-    margin-top: 7%;
+    margin-top: 5%;
     margin-left: 23%;
     margin-bottom: 3%;
     width: 55%;
     height: 400px;
     border: 2px solid #3B6FF7;
     border-radius: 15px;
-    p {
-        margin: 15px 0px 0px 0px;
-    }
     .lefthalf {
         margin-top: 3%;
-        margin-left: 10%;
+        margin-left: 4.5%;
         float: left;
+        p {
+            margin: 4.2% 0% 0% 0%;
+        }
     }
     .righthalf{
-        margin-top: 4.4%;
-        margin-left: 10%;   
+        margin-top: 4.7%;
+        margin-left: 13%;  
+        p {
+            margin: 2% 0% 0% 0%;
+        }
     }
     input[type=text], input[type=number],input[type=password],input[type=email], select {
         height: 35px;
@@ -36,7 +40,7 @@ h1 {
         border: none;
         color: white;
         font-weight: bold;
-        padding: 16px 32px;
+        padding: 3% 6%;
         text-decoration: none;
         margin-left: 64%;
         border-radius: 15px;
