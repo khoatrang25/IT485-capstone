@@ -7,31 +7,32 @@ ul {
     list-style-type: none;
     display: flex;
     li {
-        margin-bottom: 10px;
+        margin-bottom: 0.3em;
         color: white;
-        margin-top: 10px;
-        margin-right: 30px;
+        margin-top: .5em;
+        margin-right: 1em;
         img {
             width: 15%;
             float: left;
         }
         .search {
-            //float:right;
+            float:right;
+            margin: .5em 0.1em 0em 0em;
             background-color: transparent;
             color: white;
-            font-size: 16px;
-            padding: 14px 30px;
+            font-size: 1.3em;
+            padding: 0.3em 2em 2em 2em;
             border-radius: 8px;
             border: 2px solid white;
             align-self: center;
             -webkit-transition-duration: 0.4s; /* Safari */
             transition-duration: 0.4s;
-            margin-bottom: 10px;
+            margin-bottom: .3em;
             &:hover {  
                 background-color: white;
                 color: #3B6FF7;
-                font-size: 16px;
-                padding: 14px 30px;
+                font-size: 1.3em;
+                padding: 0.3em 2em 2em 2em;
                 border-radius: 8px;
                 border: 2px solid #3B6FF7;
                 align-self: center;

@@ -1,7 +1,8 @@
 .profile {
     background-color: #EFEFEF;
-    height: 200px;
+    height: 13em;
     border-bottom: 2px solid #3B6FF7;
+    padding-top: 0.1em;
     .left {
         float: left;
         margin-top: 1.2%;
@@ -11,10 +12,10 @@
         height: 10em;
     }
     .phone {
-        margin: 0px 0px 0px 0px;
+        margin: 0.5em 0em 0em 0em;
     }
     .email {
-        margin: 30px 0px 0px 0px;
+        margin: 2em 0em 0em 0em;
     }
     p {
         margin: 0px 0px 0px 0px;
@@ -23,8 +24,7 @@
         float: left;
     }
     button {
-        margin-right: 15px;
         float: right;
-        flex-direction: row;
+        margin-right: .2em;
     }
 }

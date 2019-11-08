@@ -19,8 +19,10 @@ const BookOwn = () => {
         )
     })
 
+    //Close and reset all input fields
     const handleClose = () => setShow(false) && setBook({title: '', author: '', edition: null, isbn: '', id: Math.random()}) && setError(false)
 
+    //copy the old list of books and add the new book in
     const onChange = (e) => {
         const copyBook = {}
         console.log(e)
@@ -28,7 +30,9 @@ const BookOwn = () => {
         setBook({...book, ...copyBook}) 
     }
 
+    //Submit Button
     const submitBtn = () => {
+        //return null if one of the fields' input are empty
         if (
             (!book.title || !book.author || !book.edition || !book.isbn)
         ) {
@@ -41,7 +45,6 @@ const BookOwn = () => {
         handleClose()
     }
 
-    //console.log(book)
 
     return (
         <div>
